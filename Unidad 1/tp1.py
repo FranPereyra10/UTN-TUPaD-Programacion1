@@ -50,3 +50,6 @@ numero10_3 = float(input("Ingrese un tercer numero: "))
 
 promedio = (numero10_1+numero10_2+numero10_3) / 3
 print(f"El promedio de los numeros ingresados es: {promedio}")
+
+
+#ESTE COMENTARIO ES DE PRUEBA PARA PROBAR MI RAMA PERSONAL
