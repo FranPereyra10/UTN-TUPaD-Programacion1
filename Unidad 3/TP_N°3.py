@@ -16,4 +16,21 @@ nota = int(input("Ingrese su nota: "))
 if nota >= 6:
     print("APROBADO")
 else:
-    print("DESAPROBADO")
+     print("DESAPROBADO")
+
+#EJERCICIO3
+#Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un
+#número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; en caso
+#contrario, imprimir por pantalla "Por favor, ingrese un número par". Nota: investigar el uso del
+#operador de módulo (%) en Python para evaluar si un número es par o impar.
+
+numero = int(input("Ingrese un numero: "))
+if numero % 2 == 0 :
+    print("Ha ingresado un numero par.")
+elif numero % 2 != 0:
+    numero =  int(input("Por favor ingrese un numero par"))
+    if numero % 2 == 0 :
+        print("Ha ingresado un numero par")
+    else:
+        pass 
+
