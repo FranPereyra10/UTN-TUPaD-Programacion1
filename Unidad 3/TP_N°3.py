@@ -56,4 +56,21 @@ elif edad >= 30:
 else:
     print("EDAD INVALIDA.")
 
+#EJERCICIO5
+#Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres
+#(incluyendo 8 y 14). Si el usuario ingresa una contraseña de longitud adecuada, imprimir por en
+#pantalla el mensaje "Ha ingresado una contraseña correcta"; en caso contrario, imprimir por
+#pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres". Nota: investigue el uso
+#de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal
+#como una lista o un string
+
+contra = input("Ingrese una contraseña" "\nLa contraseña debe tener 8 caracteres como minimo y 14 como maximo:  ")
+
+long_contra = len (contra)
+
+
+if long_contra >= 8 and long_contra <= 14:
+    print("Ha ingresado una contraseña correcta")
+else:
+    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
 
