@@ -74,3 +74,50 @@ if long_contra >= 8 and long_contra <= 14:
 else:
     print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
 
+#EJERCICIO6
+
+#El paquete statistics de python contiene funciones que permiten tomar una lista de números
+#y calcular la moda, la mediana y la media de dichos números. Un ejemplo de su uso es el
+#siguiente
+#La moda (mode), la mediana (median) y la media (mean) son parámetros estadísticos que se
+#pueden utilizar para predecir la forma de una distribución normal a partir del siguiente criterio:
+#● Sesgo positivo o a la derecha: cuando la media es mayor que la mediana y, a su vez, la
+#mediana es mayor que la moda.
+#● Sesgo negativo o a la izquierda: cuando la media es menor que la mediana y, a su vez,
+#la mediana es menor que la moda.
+#● Sin sesgo: cuando la media, la mediana y la moda son iguales.
+#Teniendo en cuenta lo antes mencionado, escribir un programa que tome la lista
+#numeros_aleatorios, calcule su moda, su mediana y su media y las compare para determinar si
+#hay sesgo positivo, negativo o no hay sesgo. Imprimir el resultado por pantalla.
+#Definir la lista numeros_aleatorios de la siguiente forma:
+
+#importamos del paquete la moda, mediana, media
+from statistics import mode, median, mean  
+#importamos el paquete random
+import random
+#creamos una lista que tome 50 numeros aleatorios entre 1 y 100
+numeros_aleatorios = [random.randint(1,100) for i in range (50)]
+
+moda = mode(numeros_aleatorios)
+mediana = median (numeros_aleatorios)
+media = mean (numeros_aleatorios)
+
+print(numeros_aleatorios)
+
+print (f"\nLa moda de los numeros ingresados es {moda}")
+print (f"\nLa mediana de los numeros ingresados es {mediana}")
+print (f"\nLa media de los numeros ingresados es {media}")
+print("\nTeniendo en cuenta la lista de numeros ingresados: ")
+
+#Hacemos una estructura para predecir la forma de una distribucion normal
+
+if media > mediana and  mediana > moda :
+    print ("\nLa lista tiene SESGO POSITIVO")
+elif media < mediana and mediana < moda :
+    print ("\nLa lista tiene SESGO NEGATIVO")
+elif media == moda == mediana :
+    print("\nLa lista NO TIENE SESGO")
+else :
+    print("La lista no tiene un sesgo definido")
+
+
