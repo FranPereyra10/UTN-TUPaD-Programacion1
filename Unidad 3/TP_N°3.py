@@ -192,8 +192,35 @@ elif magnitud >= 6.00  and magnitud < 7.00:
 elif magnitud > 7.00:
     print ("El terremoto fue Extremo")
 
+#EJERCICIO10
 
+#Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
+#del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
+#si el usuario se encuentra en otoño, invierno, primavera o verano.
+dia = int(input("Ingrese el dia: "))
+mes = int(input("Ingrese el mes(1-12)"))
+hemisferio = input("Ingrese el hemisferio en el que se encuentra (N-S)")
 
+#PLANTEAMOS LAS CONDICIONES PARA EL HEMISFERIO NORTE
+if hemisferio.upper() == "N":
+    if (mes == 12 and dia >= 21 ) or (1<= mes <= 2) or (mes == 3 and dia <= 20):
+        print("Usted se encuentra en el hemisferio NORTE y se encuentra en INVIERNO")
+    elif (mes == 3 and dia >= 21) or (4 <= mes <= 5) or (mes == 6 and dia <= 20):
+        print("Usted se encuentra en el hemisferio NORTE y se encuentra en PRIMAVERA")
+    elif (mes == 6 and dia >= 21) or (7<= mes <= 8) or (mes == 9 and dia <= 20):
+        print("Usted se encuentra en el hemisferio NORTE y se encuentra en VERANO")
+    elif (mes <= 9 and dia >= 21) or (10 <= mes <= 11)  or (mes == 12 and dia <= 20):
+        print("Usted se encuentra en el hemisferio NORTE y se encuentra en OTOÑO")
+#PLANTEAMOS EL HEMISFERIO SUR
+elif hemisferio.upper() == "S":
+    if (mes == 12 and dia >= 21 ) or (1<= mes <= 2) or (mes == 3 and dia <= 20):
+        print("Usted se encuentra en el hemisferio SUR y se encuentra en VERANO")
+    elif (mes == 3 and dia >= 21) or (4 <= mes <= 5) or (mes == 6 and dia <= 20):
+        print("Usted se encuentra en el hemisferio SUR y se encuentra en OTOÑO")
+    elif (mes == 6 and dia >= 21) or (7<= mes <= 8) or (mes == 9 and dia <= 20):
+        print("Usted se encuentra en el hemisferio SUR y se encuentra en INVIERNO")
+    elif (mes <= 9 and dia >= 21) or (10 <= mes <= 11)  or (mes == 12 and dia <= 20):
+        print("Usted se encuentra en el hemisferio SUR y se encuentra en PRIMAVERA")
 
 
 
