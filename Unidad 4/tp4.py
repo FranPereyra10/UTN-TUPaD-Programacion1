@@ -53,3 +53,17 @@ while num != 0:
 
 print ("La suma total de los numeros ingresados es: ",suma)
 
+#EJERCICIO5
+
+#Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el
+#programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
+num = int(input("Ingrese un numero: "))
+import random
+num_aleat = random.randint(0,9)
+cont = 1
+while num != num_aleat:
+    cont += 1  
+    num = int(input(("Intenta otra vez: ")))
+
+print(f"El numero a adivinar era: {num_aleat}")
+print(f"Usted a ocupado {cont}, intentos ")
