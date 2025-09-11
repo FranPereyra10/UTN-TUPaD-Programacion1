@@ -66,7 +66,7 @@ while num != num_aleat:
     num = int(input(("Intenta otra vez: ")))
 
 print(f"El numero a adivinar era: {num_aleat}")
-print(f"Usted a ocupado {cont}, intentos ")print(f"Usted a ocupado {cont}, intentos ")
+print(f"Usted a ocupado {cont}, intentos ")
 
 #EJERCICIO6
 
@@ -76,3 +76,14 @@ print(f"Usted a ocupado {cont}, intentos ")print(f"Usted a ocupado {cont}, inten
 for i in range (100,-1,-1):
     if i % 2 == 0:
         print (i)
+
+#EJERCICIO7
+#Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un
+#número entero positivo indicado por el usuario.
+
+num = int(input("Ingrese un numero positivo: "))
+suma = 0
+for i in range (0,num+1,1):
+    suma += i
+
+print(f"La suma total de los numeros comprendidos entre cero y el numero ingresado es: {suma}")
