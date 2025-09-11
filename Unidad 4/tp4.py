@@ -131,3 +131,17 @@ for i in range (0,100):
     suma += num
 
 print("La media  de los numeros ingresados es:",suma/100)
+
+#EJERCICIO10
+
+#Escribe un programa que invierta el orden de los dígitos de un número ingresado por el
+#usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745
+
+num = int(input("Ingrese un numero: "))
+inverso = 0
+digito = 0
+while num != 0:
+    digito = num % 10
+    num = int(num/10)
+    inverso = inverso*10+digito
+print (inverso)
