@@ -87,3 +87,33 @@ for i in range (0,num+1,1):
     suma += i
 
 print(f"La suma total de los numeros comprendidos entre cero y el numero ingresado es: {suma}")
+
+#EJERCICIO8
+
+#Escribe un programa que permita al usuario ingresar 100 números enteros. Luego, el
+#programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos son
+#negativos y cuántos son positivos. (Nota: para probar el programa puedes usar una cantidad
+#menor, pero debe estar preparado para procesar 100 números con un solo cambio).
+par = 0
+impar = 0
+pos = 0
+neg = 0
+cero = 0
+for i in range (0,10):
+    num = int(input("Ingrese un numero:"))
+    if num % 2 == 0 and num!= 0:
+        par += 1  
+    elif num % 2 != 0 and num!= 0:
+        impar += 1 
+    if num > 0:
+        pos += 1
+    elif num < 0:
+        neg += 1
+    elif num == 0:
+        cero += 1
+
+print (f"Usted a ingresado {par} numeros pares") 
+print (f"Usted a ingresado {impar} numeros impares")
+print (f"Usted a ingresado {neg} numeros negativos")
+print (f"Usted a ingresado {pos} numeros positivos")   
+print (f"Usted a ingresado el numero cero {cero} veces") 
