@@ -71,3 +71,24 @@ for i in lista1:
     
 
 print (f"La lista sin elementos repetidos es: {lista2} ")
+
+#EJERCICIO5
+#EJERCICIO 5
+#Crear una lista con los nombres de 8 estudiantes presentes en clase.
+#• Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
+#• Mostrar la lista final actualizada
+
+alumnos = []
+add_alumno = 0
+for i in range (8):
+    alumnos.append(input("Ingrese el nombre de los Alumnos presentes: "))
+add_alumno = int(input("Si desea agregar un alumno presione 1. \nSi desea eliminar un alumno Ingrese 2. \n Presione cualquier tecla para continuar."))
+if add_alumno == 1:
+    alumnos.append(input("Ingrese el Nombre del alumno que desea agregar: "))
+elif add_alumno == 2:
+    alumnos.remove(input("Ingrese el nombre del alumno que desea eliminar: "))
+else:
+    pass 
+
+
+print(f"La lista de alumnos presentes es: {alumnos}")
