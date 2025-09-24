@@ -56,3 +56,18 @@ print(f"La lista posee {len(numeros_pares)} numeros pares")
 print(f"Los numeros impares de la lista son: {numeros_impares}")
 print(f"La lista posee {len(numeros_impares)} numeros impares")
 
+#EJERCICIO 4
+#Dada una lista con valores repetidos: 1,3,5,3,7,1,9,5,3
+#• Crear una nueva lista sin elementos repetidos.
+#• Mostrar el resultado.
+
+lista1 = [1,3,5,3,7,1,9,5,3]
+lista2 = []
+print(f"La lista original es: {lista1}")
+
+for i in lista1:
+    if i not in lista2:
+        lista2.append(i)
+    
+
+print (f"La lista sin elementos repetidos es: {lista2} ")
