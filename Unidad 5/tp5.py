@@ -92,3 +92,19 @@ else:
 
 
 print(f"La lista de alumnos presentes es: {alumnos}")
+
+#EJERCICIO 6
+#metodo1
+#Dada una lista con 7 números, rotar todos los elementos una posición hacia la derecha (el
+último pasa a ser el primero).
+lista1 = list(range(1,8))
+lista2 = []
+lista2.append(lista1[6])
+lista1.remove(lista1[6])
+lista3 = lista2+lista1
+print(lista3)
+
+#metodo2 
+#lista = list(range(1,8))
+#lista2 =[lista[6]]+lista[0:6]
+#print(lista2)
