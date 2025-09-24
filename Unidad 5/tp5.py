@@ -108,3 +108,48 @@ print(lista3)
 #lista = list(range(1,8))
 #lista2 =[lista[6]]+lista[0:6]
 #print(lista2)
+
+#EJERCICIO 7
+#Crear una matriz (lista anidada) de 7x2 con las temperaturas mínimas y máximas de una
+#semana.
+#• Calcular el promedio de las mínimas y el de las máximas.
+#• Mostrar en qué día se registró la mayor amplitud térmica.
+
+temperatura_semana = [["Lunes"],["Martes"],["Miercoles"],["Jueves"],["Viernes"],["Sabado"],["Domingo"]]
+amplitud=[]
+promedio_max = 0
+promedio_min = 0
+
+
+for i in range (7):
+    dia = temperatura_semana[i]
+   
+    temperatura_semana[i].append(input(f"Ingrese la tempera maxima registrada el dia: {dia[0]} : "))
+    temperatura_semana[i].append(input(f"Ingrese la temperatura minima registrada el dia: {dia[0]} : "))
+
+print("\nEL cuadro semanal de las temperaturas registradas es el siguiente: ")
+
+for fila in range (len(temperatura_semana)):
+    for columna in range (len(temperatura_semana[0])):
+        print(temperatura_semana[fila][columna], end=' ')
+    print()
+
+for i in range (7):
+    temperatura = int(temperatura_semana[i][1])
+    promedio_max = promedio_max + temperatura 
+
+print(f"El promedio de las temperaturas maximas registradas es: {(promedio_max/7)} °" )
+
+for i in range (7):
+    temperatura = int(temperatura_semana[i][2])
+    promedio_min = promedio_min + temperatura 
+
+print(f"El promedio de las temperaturas minimas registradas es: {(promedio_min/7)} °" )
+
+for i in range (7):
+     
+    amplitud.append([int(temperatura_semana[i][1])-int(temperatura_semana[i][2])])
+
+mayor = amplitud.index(max(amplitud))
+
+print(f"El dia con mayor amplitud termica registrada fue el dia: {temperatura_semana[mayor][0]}")
