@@ -153,3 +153,43 @@ for i in range (7):
 mayor = amplitud.index(max(amplitud))
 
 print(f"El dia con mayor amplitud termica registrada fue el dia: {temperatura_semana[mayor][0]}")
+
+#EJERCICIO 8
+#Crear una matriz con las notas de 5 estudiantes en 3 materias.
+#• Mostrar el promedio de cada estudiante.
+#• Mostrar el promedio de cada materia.
+
+listado = [[],[],[]]
+
+for i in range (3):
+    listado[i].append(input("Ingrese el nombre de la materia: "))
+
+for i in range(5):
+    listado[0].append(int(input(f"Ingrese la nota del {i+1}° estudiante en {listado[0][0]}:")))
+    listado[1].append(int(input(f"Ingrese la nota del {i+1}° estudiante en {listado[1][0]}:")))
+    listado[2].append(int(input(f"Ingrese la nota del {i+1}° estudiante en {listado[2][0]}:")))
+
+for fila in range (len(listado)):
+    for columna in range (len(listado[0])):
+        print(listado[fila] [columna], end = ' ')
+    print ()
+
+print("Promedio por estudiantes: ")
+estudiante1 = (int(listado[0][1])+int(listado[1][1])+int(listado[2][1])) / 3
+estudiante2 = (int(listado[0][2])+int(listado[1][2])+int(listado[2][2])) / 3
+estudiante3 = (int(listado[0][3])+int(listado[1][3])+int(listado[2][3])) / 3
+estudiante4 = (int(listado[0][4])+int(listado[1][4])+int(listado[2][4])) / 3
+estudiante5 = (int(listado[0][5])+int(listado[1][5])+int(listado[2][5])) / 3
+
+
+print(f"El promedio del 1° estudiante es de: {estudiante1}")
+print(f"El promedio del 2° estudiante es de: {estudiante2}")
+print(f"El promedio del 3° estudiante es de: {estudiante3}")
+print(f"El promedio del 4° estudiante es de: {estudiante4}")
+print(f"El promedio del 5° estudiante es de: {estudiante5}")
+
+print("Promedio por materia: ")
+
+for i in range (len(listado)):
+    promedio_materia = sum(listado[i][1:6])/5
+    print(f"El promedio de la materia {listado[i][0]} es: {promedio_materia}")
