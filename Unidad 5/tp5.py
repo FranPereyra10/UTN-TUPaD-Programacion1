@@ -193,3 +193,25 @@ print("Promedio por materia: ")
 for i in range (len(listado)):
     promedio_materia = sum(listado[i][1:6])/5
     print(f"El promedio de la materia {listado[i][0]} es: {promedio_materia}")
+#EJERCICIO 9
+
+#Representar un tablero de Ta-Te-Ti como una lista de listas (3x3).
+#• Inicializarlo con guiones "-" representando casillas vacías.
+#• Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O".
+#• Mostrar el tablero después de cada jugada
+
+ta_te_ti = [["-","-","-"],["-","-","-"],["-","-","-"]]
+jugada = int(input("Ingrese 1 para jugar: "))
+#BIENVENIDOS AL TA-TE-TI!!
+
+while jugada == 1:
+        fila_tateti = int(input("Fila donde desea realizar su jugada"))
+        columna_tateti = int(input("Columna donde desea realizar su jugada"))
+        ta_te_ti[fila_tateti][columna_tateti] = input("Ingrese su jugada: X-O")
+
+        for fila in range (len(ta_te_ti)):
+            for columna in range(len(ta_te_ti[0])):
+                print(ta_te_ti[fila][columna], end='  ')
+            print()
+        jugada = int(input("Ingrese 1 para jugar: "))
+print("Gracias por jugar")
